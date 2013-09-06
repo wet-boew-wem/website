@@ -14,7 +14,7 @@ Simple and flexible HTML, CSS, and Javascript for popular user interface compone
 	docpad run
 	```
 
-1. [Open http://localhost:9778][localhost]
+1. Open [http://localhost:9778][localhost]
 
 1. Start hacking away by modifying the `src` directory
 
