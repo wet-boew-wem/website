@@ -1,0 +1,13 @@
+---
+title: Concepts
+layout: page
+pageOrder: 2
+---
+
+nav(class='linklist')
+  :t(render="html.eco")
+    <% for document in @getCollection('concepts').toJSON(): %>
+      <li><span><%= document.date.toDateString() %></span>
+      &raquo;
+      <a href="<%= document.url %>"><%= document.title %></a></li>
+    <% end %>

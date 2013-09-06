@@ -1,0 +1,55 @@
+{
+  "name": "wet-boew-drupal.docpad",
+  "version": "0.1.0",
+  "description": "Drupal WEM Documentation Site leveraging DocPad.",
+  "homepage": "https://github.com/wet-boew-wem/website",
+  "keywords": [
+    "docpad-skeleton",
+    "docpad",
+    "website",
+    "bootstrap",
+    "twitter bootstrap"
+  ],
+  "author": "William Hearn <will@sylus.ca> (http://coderwall.com/sylus)",
+  "maintainers": [
+    "William Hearn <will@sylus.ca> (http://coderwall.com/sylus)"
+  ],
+  "contributors": [
+    "William Hearn <will@sylus.ca> (http://coderwall.com/sylus)"
+  ],
+  "bugs": {
+    "url": "https://github.com/wet-boew-wem/website/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wet-boew-wem/website.git"
+  },
+  "engines": {
+    "node": "0.10",
+    "npm": "1.2"
+  },
+  "dependencies": {
+    "docpad": "~6.51.6",
+    "docpad-plugin-downloader": "~2.1.2",
+    "docpad-plugin-cleanurls": "~2.5.1",
+    "docpad-plugin-coffeescript": "~2.2.2",
+    "docpad-plugin-eco": "~2.0.2",
+    "docpad-plugin-less": "~2.2.0",
+    "docpad-plugin-marked": "~2.1.1",
+    "docpad-plugin-partials": "~2.8.0",
+    "docpad-plugin-related": "~2.0.5",
+    "docpad-plugin-text": "~2.3.0",
+    "docpad-plugin-ghpages": "~2.3.0",
+    "docpad-plugin-highlightjs": "~2.1.7",
+    "docpad-plugin-sass": "~2.6.0",
+    "docpad-plugin-services": "~2.2.6",
+    "docpad-plugin-jade": "~2.6.0"
+  },
+  "devDependencies": {
+    "docpad-plugin-livereload": "~2.5.3"
+  },
+  "main": "node_modules/docpad/bin/docpad-server",
+  "scripts": {
+    "start": "node_modules/docpad/bin/docpad-server"
+  }
+}
