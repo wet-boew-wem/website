@@ -118,6 +118,15 @@ docpadConfig = {
 			aliases:
 				vcl: 'perl'
 
+		downloader:
+    	downloads: [
+      	{
+          name: 'Readme'
+          path: 'src/documents/modules/wetkit-core.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-core/7.x-1.x/README.md'
+        }
+      ]
+
 	# =================================
 	# DocPad Events
 
