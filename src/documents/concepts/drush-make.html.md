@@ -42,4 +42,3 @@ The WET Distribution now uses Drush Make for rapid built out of the Drupal codeb
   ``` bash
   chown -R apache:apache /sites/domain/files
   ```
-
