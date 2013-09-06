@@ -1,9 +1,8 @@
 ```
 title: Drush Make
 layout: concept
-tags: ['intro','concept']
+tags: ['concept']
 ```
-
 
 The WET Distribution now uses Drush Make for rapid built out of the Drupal codebase. A drush make file is similar to "ant script" which allows for us to just host the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then can then perform a build out of both the Drupal Core package + and various contributed modules hosted on Drupal.org.
 

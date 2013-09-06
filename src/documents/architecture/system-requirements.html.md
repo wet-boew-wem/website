@@ -14,7 +14,7 @@ Drupal WEM can run on a wide range of desktop and server operating systems inclu
 
 ## Database server
 
-* PostgreSQL 8.4 (Recommended)
+* PostgreSQL 8.4+ (Recommended)
 * MySQL 5.0.15 or higher with PDO
 * Microsoft SQL Server, and Oracle are supported by an additional module
 

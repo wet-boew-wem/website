@@ -5,4 +5,4 @@ tags: ['intro','page']
 pageOrder: 3
 ```
 
-This is a **page**
+This is a standard help page. Content should be coming shortly.
