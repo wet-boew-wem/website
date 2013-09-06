@@ -85,11 +85,14 @@ docpadConfig = {
 	# These are special collections that our website makes available to us
 
 	collections:
-		pages: (database) ->
-			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
+		architecture: (database) ->
+			database.findAllLive({tags:$has:'architecture'}, [date:-1])
 
 		concepts: (database) ->
 			database.findAllLive({tags:$has:'concept'}, [date:-1])
+
+		pages: (database) ->
+			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
 
 		performance: (database) ->
 			database.findAllLive({tags:$has:'performance'}, [date:-1])

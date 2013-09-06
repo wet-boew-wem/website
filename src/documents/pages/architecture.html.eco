@@ -1,11 +1,11 @@
 ---
-title: High Performance
+title: Architecture
 layout: page
-pageOrder: 4
+pageOrder: 1
 ---
 
 <nav class="linklist">
-	<% for document in @getCollection('performance').toJSON(): %>
+	<% for document in @getCollection('architecture').toJSON(): %>
 		<li><span><%= document.date.toDateString() %></span>
 		&raquo;
 		<a href="<%= document.url %>"><%= document.title %></a></li>
