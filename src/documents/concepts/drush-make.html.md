@@ -25,7 +25,7 @@ The WET Distribution now uses Drush Make for rapid built out of the Drupal codeb
 4. Build the Drupal installation profile
 
   ``` bash
-  drush make --prepare-install --no-gitinfofile --working-copy wet-boew-drupal/build-wetkit.make /var/www/html --yes
+  drush make --prepare-install --no-gitinfofile --working-copy wet-boew-drupal/build-wetkit-github.make /var/www/html --yes
   ```
 
 5. Quickly install using the Drush CLI (Password must not be simple or won't install)
