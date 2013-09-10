@@ -2,6 +2,7 @@
 
 # Require
 fsUtil = require('fs')
+marked = require 'docpad-plugin-marked/node_modules/marked'
 pathUtil = require('path')
 
 # It is simply a CoffeeScript Object which is parsed by CSON
@@ -97,6 +98,20 @@ docpadConfig = {
 			language ?= pathUtil.extname(relativePath).substr(1)
 			contents = @readFile(relativePath)
 			return """<pre><code class="#{language}">#{contents}</code></pre>"""
+
+    # MarkDown File
+		markdownFile: (relativePath,language) ->
+			language ?= pathUtil.extname(relativePath).substr(1)
+			contents = @readFile(relativePath)
+			marked.setOptions({
+				breaks: false
+				gfm: true
+				pedantic: false
+				sanitize: false
+				tables: true
+				highlight: null
+			})
+			return marked(contents)
 
 	# =================================
 	# Collections
