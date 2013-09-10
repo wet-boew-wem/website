@@ -1,0 +1,9 @@
+---
+title: WetKit Search
+layout: module
+tags: ['module']
+---
+
+<nav class="module-readme">
+  <%- @codeFile('tmp/wetkit-search.html.md', 'markdown') %>
+</nav>

@@ -1,0 +1,9 @@
+---
+title: WetKit Languages
+layout: module
+tags: ['module']
+---
+
+<nav class="module-readme">
+  <%- @codeFile('tmp/wetkit-language.html.md', 'markdown') %>
+</nav>

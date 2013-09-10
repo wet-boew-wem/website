@@ -1,0 +1,9 @@
+---
+title: WetKit Shiny
+layout: module
+tags: ['module']
+---
+
+<nav class="module-readme">
+  <%- @codeFile('tmp/wetkit-shiny.html.md', 'markdown') %>
+</nav>

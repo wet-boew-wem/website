@@ -1,5 +1,9 @@
 # The DocPad Configuration File
 
+# Require
+fsUtil = require('fs')
+pathUtil = require('path')
+
 # It is simply a CoffeeScript Object which is parsed by CSON
 docpadConfig = {
 
@@ -79,6 +83,20 @@ docpadConfig = {
 			# Merge the document keywords with the site keywords
 			@site.keywords.concat(@document.keywords or []).join(', ')
 
+		# Read File
+		readFile: (relativePath) ->
+			path = @document.fullDirPath+'/'+relativePath
+			result = fsUtil.readFileSync(path)
+			if result instanceof Error
+				throw result
+			else
+				return result.toString()
+
+		# Code File
+		codeFile: (relativePath,language) ->
+			language ?= pathUtil.extname(relativePath).substr(1)
+			contents = @readFile(relativePath)
+			return """<pre><code class="#{language}">#{contents}</code></pre>"""
 
 	# =================================
 	# Collections
@@ -90,6 +108,9 @@ docpadConfig = {
 
 		concepts: (database) ->
 			database.findAllLive({tags:$has:'concept'}, [date:-1])
+
+		modules: (database) ->
+			database.findAllLive({tags:$has:'module'}, [name:1])
 
 		pages: (database) ->
 			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
@@ -120,10 +141,125 @@ docpadConfig = {
 
 		downloader:
     	downloads: [
+    		{
+          name: 'WetKit Readme'
+          path: 'src/documents/modules/tmp/wetkit.html.md'
+          url: 'https://raw.github.com/wet-boew/wet-boew-drupal/7.x-1.x/README.md'
+        }
       	{
-          name: 'Readme'
-          path: 'src/documents/modules/wetkit-core.html.md'
+          name: 'WetKit Admin Readme'
+          path: 'src/documents/modules/tmp/wetkit-admin.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-admin/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Bean Readme'
+          path: 'src/documents/modules/tmp/wetkit-bean.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-bean/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Breadcrumbs Readme'
+          path: 'src/documents/modules/tmp/wetkit-breadcrumbs.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-breadcrumbs/7.x-1.x/README.md'
+        }
+      	{
+          name: 'WetKit Core Readme'
+          path: 'src/documents/modules/tmp/wetkit-core.html.md'
           url: 'https://raw.github.com/wet-boew-wem/wetkit-core/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Demo Readme'
+          path: 'src/documents/modules/tmp/wetkit-demo.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-demo/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Deployment Readme'
+          path: 'src/documents/modules/tmp/wetkit-deployment.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-deployment/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Git Readme'
+          path: 'src/documents/modules/tmp/wetkit-git.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-git/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Images Readme'
+          path: 'src/documents/modules/tmp/wetkit-images.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-images/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Language Readme'
+          path: 'src/documents/modules/tmp/wetkit-language.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-language/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Layout Readme'
+          path: 'src/documents/modules/tmp/wetkit-layout.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-layout/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Menu Readme'
+          path: 'src/documents/modules/tmp/wetkit-menu.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-menu/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Metatag Readme'
+          path: 'src/documents/modules/tmp/wetkit-metatag.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-metatag/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Migrate Readme'
+          path: 'src/documents/modules/tmp/wetkit-migrate.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-migrate/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Pages Readme'
+          path: 'src/documents/modules/tmp/wetkit-pages.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-pages/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Search Readme'
+          path: 'src/documents/modules/tmp/wetkit-search.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-search/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Theme Readme'
+          path: 'src/documents/modules/tmp/wetkit-theme.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-theme/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Users Readme'
+          path: 'src/documents/modules/tmp/wetkit-users.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-users/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit WETBOEW Readme'
+          path: 'src/documents/modules/tmp/wetkit-wetboew.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-wetboew/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Widgets Readme'
+          path: 'src/documents/modules/tmp/wetkit-widgets.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-widgets/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit WYSIWYG Readme'
+          path: 'src/documents/modules/tmp/wetkit-wysiwyg.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-wysiwyg/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Ember Readme'
+          path: 'src/documents/modules/tmp/wetkit-ember.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-ember/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Omega Readme'
+          path: 'src/documents/modules/tmp/wetkit-omega.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-omega/7.x-1.x/README.md'
+        }
+        {
+          name: 'WetKit Shiny Readme'
+          path: 'src/documents/modules/tmp/wetkit-shiny.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-shiny/7.x-1.x/README.md'
         }
       ]
 

@@ -1,0 +1,9 @@
+---
+title: WetKit Migrate
+layout: module
+tags: ['module']
+---
+
+<nav class="module-readme">
+  <%- @codeFile('tmp/wetkit-migrate.html.md', 'markdown') %>
+</nav>
