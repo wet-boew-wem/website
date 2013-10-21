@@ -24,7 +24,7 @@ docpadConfig = {
 			oldUrls: []
 
 			# The default title of our website
-			title: "Drupal WEM Documentation"
+			title: "Drupal WxT Documentation"
 
 			# The website description (for SEO)
 			description: """
