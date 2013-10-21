@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li><%= @document.title %></li>
+</ol>
+
+<article id="feature" class="feature">
+	<h1><%= @document.title %></h1>
+	<div class="feature-content"><%- @content %></div>
+</article>
+
+<footer>
+	<% if  @document.relatedDocuments and @document.relatedDocuments.length: %>
+	<section id="related">
+		<h3>Related Features</h3>
+		<nav class="linklist">
+			<% for document in @document.relatedDocuments: %>
+				<li><a href="<%= document.url %>"><%= document.title %></a></li>
+			<% end %>
+		</nav>
+	</section>
+	<% end %>
+</footer>

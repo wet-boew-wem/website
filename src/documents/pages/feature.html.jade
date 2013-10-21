@@ -1,11 +1,11 @@
 ---
-title: Concepts
+title: Features
 layout: page
-pageOrder: 2
+pageOrder: 3
 ---
 
 nav(class='linklist')
   :t(render="html.eco")
-    <% for document in @getCollection('concepts').toJSON(): %>
+    <% for document in @getCollection('features').toJSON(): %>
       <li><a href="<%= document.url %>"><%= document.title %></a></li>
     <% end %>

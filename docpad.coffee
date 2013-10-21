@@ -124,6 +124,9 @@ docpadConfig = {
 		concepts: (database) ->
 			database.findAllLive({tags:$has:'concept'}, [date:-1])
 
+		features: (database) ->
+			database.findAllLive({tags:$has:'feature'}, [date:-1])
+
 		modules: (database) ->
 			database.findAllLive({tags:$has:'module'}, [name:1])
 
