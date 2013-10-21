@@ -2,6 +2,11 @@
 layout: default
 ---
 
+<ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li><%= @document.title %></li>
+</ol>
+
 <article id="module" class="module">
 	<h1><%= @document.title %></h1>
 	<div class="module-content"><%- @content %></div>

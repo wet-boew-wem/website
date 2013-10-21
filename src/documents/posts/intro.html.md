@@ -1,5 +1,5 @@
 ```
-title: New Documentation Site for Drupal WEM
+title: New Documentation Site for Drupal WxT
 layout: post
 tags: ['intro','post']
 ```

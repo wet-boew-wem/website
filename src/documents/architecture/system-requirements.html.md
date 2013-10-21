@@ -4,7 +4,7 @@ layout: architecture
 tags: ['architecture']
 ```
 
-Drupal WEM can run on a wide range of desktop and server operating systems including Windows, MacOS, Linux and UNIX. However, you will need to configure the environment according to the standard Drupal 7 requirements. This page provides a brief summary of those requirements and recommendations. More information is available from the [system requirements page][system_requirements] at Drupal.org.
+Drupal WxT can run on a wide range of desktop and server operating systems including Windows, MacOS, Linux and UNIX. However, you will need to configure the environment according to the standard Drupal 7 requirements. This page provides a brief summary of those requirements and recommendations. More information is available from the [system requirements page][system_requirements] at Drupal.org.
 
 ## Web server
 
