@@ -208,8 +208,8 @@ docpadConfig = {
         }
         {
           name: 'WetKit Layout Readme'
-          path: 'src/documents/modules/tmp/wetkit-layout.html.md'
-          url: 'https://raw.github.com/wet-boew-wem/wetkit-layout/7.x-1.x/README.md'
+          path: 'src/documents/modules/tmp/wetkit-layouts.html.md'
+          url: 'https://raw.github.com/wet-boew-wem/wetkit-layouts/7.x-1.x/README.md'
         }
         {
           name: 'WetKit Menu Readme'

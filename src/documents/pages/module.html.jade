@@ -7,7 +7,5 @@ pageOrder: 3
 nav(class='linklist')
   :t(render="html.eco")
     <% for document in @getCollection('modules').toJSON(): %>
-      <li><span><%= document.date.toDateString() %></span>
-      &raquo;
-      <a href="<%= document.url %>"><%= document.title %></a></li>
+      <li><a href="<%= document.url %>"><%= document.title %></a></li>
     <% end %>

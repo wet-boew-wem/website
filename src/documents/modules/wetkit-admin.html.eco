@@ -1,5 +1,5 @@
 ---
-title: WetKit Admin
+title: Admin
 layout: module
 tags: ['module']
 ---
@@ -13,8 +13,8 @@ tags: ['module']
         <li><a href="#rendered" data-toggle="tab">Rendered</a></li>
       </ul>
       <div class="tab-content">
-        <div class="tab-pane active" id="raw">  <%- @codeFile('tmp/wetkit-core.html.md', 'markdown') %></div>
-        <div class="tab-pane" id="rendered">  <%- @markdownFile('tmp/wetkit-core.html.md', 'markdown') %></div>
+        <div class="tab-pane active" id="raw">  <%- @codeFile('tmp/wetkit-admin.html.md', 'markdown') %></div>
+        <div class="tab-pane" id="rendered">  <%- @markdownFile('tmp/wetkit-admin.html.md', 'markdown') %></div>
       </div>
     </div>
   </div>
