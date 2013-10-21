@@ -4,6 +4,8 @@ layout: performance
 tags: ['varnish','performance']
 ```
 
+![Varnish Banner][varnish_banner]
+
 [Varnish][varnish] is an open source software-only reverse HTTP caching proxy (often referred to as a Web Accelerator). Varnish is developed on Linux but can be compiled on other UNIX operating systems. It is heavily multi-threaded and is capable of taking advantage of the memory available on 64-bit systems as well as 32-bit systems, and should scale as CPU’s are added. Reputedly, Varnish can respond to hundreds of requests per second.
 
 A caching reverse proxy is a layer of software that sits between the external world and the web server. Very often with websites, the same static page is served over and over. Varnish caches these web pages and when an HTTP request comes in for a static page, Varnish will retrieve the cached page from virtual memory itself and quickly return it to the web client from memory. In this way, the overhead of the Apache web server and WCMS application are avoided altogether.
@@ -20,7 +22,7 @@ Varnish is also a software load balancer. Varnish uses round-robin balancing to 
 
 Below is an example of a best practice default.vcl for varnish based on the [MyPlanetDigital][myplanetdigital] Ariadne github repository: [Default VCL][varnish_vcl]
 
-``` vcl
+``` bash
 # This is a basic VCL configuration file for varnish.  See the vcl(7)
 # man page for details on VCL syntax and semantics.
 #
@@ -190,4 +192,5 @@ sub vcl_error {
 
 [myplanetdigital]:  http://www.myplanetdigital.com
 [varnish]:          https://www.varnish-cache.org
+[varnish_banner]:   https://dl.dropboxusercontent.com/u/38413195/drupalwxt/performance/varnish-cache.png
 [varnish_vcl]:      https://github.com/myplanetdigital/ariadne/blob/master/cookbooks-override/varnish/templates/default/default.vcl.erb

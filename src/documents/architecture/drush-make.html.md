@@ -1,5 +1,6 @@
 ```
 title: Drush Make
+description: Drush all the things!
 layout: architecture
 tags: ['architecture']
 ```

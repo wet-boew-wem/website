@@ -8,26 +8,27 @@ layout: default
 </ol>
 
 <article id="performance" class="performance">
-	<h1><%= @document.title %></h1>
-	<div class="performance-content"><%- @content %></div>
+  <div class="page-header">
+      <h1><%= @document.title %></h1>
+    <% if  @document.description and @document.description.length: %>
+    <p class="lead"><%= @document.description %></p>
+    <% end %>
+  </div>
+    <div class="performance-content"><%- @content %></div>
 </article>
 
 <!-- Get the next and previous document from the current document -->
 <% for document,documentIndex in @getCollection('performance').toJSON(): %>
-
     <!-- Get the current document, from there, we will be able to get the next and previous -->
     <% if @document.id is document.id: %>
-
         <!-- We have the current document, do the next and previous buttons -->
         <ul class="pager">
-
         <!-- Check if we have a previous page -->
         <% if documentIndex >= 1: %>
             <li class="previous"><a href="<%= @getCollection('performance').toJSON()[documentIndex-1].url %>" class="previous">&larr; <%= @getCollection('performance').toJSON()[documentIndex-1].title %></a></li>
         <% else: %>
         		<li class="previous disabled"><a href="#" class="previous">&larr; Previous</a></li>
         <% end %>
-
         <!-- Check if we have a next page -->
         <% if documentIndex < @getCollection('performance').length - 1: %>
              <li class="next"><a href="<%= @getCollection('performance').toJSON()[documentIndex+1].url %>" class="next"><%= @getCollection('performance').toJSON()[documentIndex+1].title %> &rarr;</a></li>
