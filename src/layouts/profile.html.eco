@@ -1,0 +1,19 @@
+---
+layout: default
+---
+
+<ol class="breadcrumb">
+  <li><a href="/">Home</a></li>
+  <li><%= @document.title %></li>
+</ol>
+
+<article id="module" class="module">
+  <div class="page-header">
+      <h1>Installation Profile: <%= @document.title %></h1>
+    <% if  @document.description and @document.description.length: %>
+    <p class="lead"><%= @document.description %></p>
+    <% end %>
+  </div>
+    <div class="module-content"><%- @content %></div>
+</article>
+

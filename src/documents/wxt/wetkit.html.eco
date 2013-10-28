@@ -1,0 +1,21 @@
+---
+title: WetKit
+layout: profile
+tags: ['profile']
+---
+
+<nav class="module-readme">
+  <div class="panel panel-default">
+    <div class="panel-heading"><strong>README.MD</strong></div>
+    <div class="panel-body">
+      <ul class="nav nav-tabs" id="codeSwitch">
+        <li><a href="#raw" data-toggle="tab">Raw</a></li>
+        <li class="active"><a href="#rendered" data-toggle="tab">Rendered</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane" id="raw">  <%- @codeFile('tmp/wetkit.html.md', 'markdown') %></div>
+        <div class="tab-pane active" id="rendered">  <%- @markdownFile('tmp/wetkit.html.md', 'markdown') %></div>
+      </div>
+    </div>
+  </div>
+</nav>

@@ -4,7 +4,7 @@ layout: performance
 tags: ['varnish','performance']
 ```
 
-<img src="https://dl.dropboxusercontent.com/u/38413195/drupalwxt/performance/varnish-cache.png" alt="Varnish Banner" class ="img-responsive" />
+<img src="https://dl.dropboxusercontent.com/u/38413195/drupalwxt/performance/varnish-cache.png" alt="Varnish Banner" class="img-responsive" />
 
 [Varnish][varnish] is an open source software-only reverse HTTP caching proxy (often referred to as a Web Accelerator). Varnish is developed on Linux but can be compiled on other UNIX operating systems. It is heavily multi-threaded and is capable of taking advantage of the memory available on 64-bit systems as well as 32-bit systems, and should scale as CPU’s are added. Reputedly, Varnish can respond to hundreds of requests per second.
 

@@ -1,0 +1,26 @@
+---
+title: WxT
+layout: page
+pageOrder: 4
+---
+
+h2  Installation Profile
+nav(class='linklist')
+  :t(render="html.eco")
+    <% for document in @getCollection('profiles').toJSON(): %>
+      <li><a href="<%= document.url %>"><%= document.title %></a></li>
+    <% end %>
+
+h2  Custom Modules
+nav(class='linklist')
+  :t(render="html.eco")
+    <% for document in @getCollection('modules').toJSON(): %>
+      <li><a href="<%= document.url %>"><%= document.title %></a></li>
+    <% end %>
+
+h2  Custom Themes
+nav(class='linklist')
+  :t(render="html.eco")
+    <% for document in @getCollection('themes').toJSON(): %>
+      <li><a href="<%= document.url %>"><%= document.title %></a></li>
+    <% end %>

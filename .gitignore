@@ -1,7 +1,7 @@
 # Ignore Docpad Files
 node_modules/
 out/
-src/documents/modules/tmp
+src/documents/wxt/tmp
 
 # Ignore Development Files
 compass_app_log.txt
