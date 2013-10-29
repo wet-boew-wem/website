@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+:t(render="eco")
+  <ol class="breadcrumb">
+    <li><a href="/">Home</a></li>
+    <li><%= @document.title %></li>
+  </ol>
+
+  <article id="post" class="post">
+    <div class="page-header">
+      <h1><%= @document.title %></h1>
+      <% if  @document.description and @document.description.length: %>
+      <p class="lead"><%= @document.description %></p>
+      <% end %>
+    </div>
+    <% if  @document.gravatar and @document.gravatar.length: %>
+    <div class="picture gravatar-pic pull-left">
+      <a href="/" rel="home">
+        <img src="<%- @getGravatarUrl(@document.gravatar, '75') %>" alt="gravatar user picture" class="img-rounded">
+      </a>
+    </div>
+    <% end %>
+    <div class="post-content"><%- @content %></div>
+  </article>
+
+  <footer>
+    <!-- Get the next and previous document from the current document -->
+    <% for document,documentIndex in @getCollection('posts').toJSON(): %>
+        <!-- Get the current document, from there, we will be able to get the next and previous -->
+        <% if @document.id is document.id: %>
+            <!-- We have the current document, do the next and previous buttons -->
+            <ul class="pager">
+            <!-- Check if we have a previous page -->
+            <% if documentIndex >= 1: %>
+                <li class="previous"><a href="<%= @getCollection('posts').toJSON()[documentIndex-1].url %>" class="previous">&larr; <%= @getCollection('posts').toJSON()[documentIndex-1].title %></a></li>
+            <% else: %>
+                <li class="previous disabled"><a href="#" class="previous">&larr; Previous</a></li>
+            <% end %>
+            <!-- Check if we have a next page -->
+            <% if documentIndex < @getCollection('posts').length - 1: %>
+                 <li class="next"><a href="<%= @getCollection('posts').toJSON()[documentIndex+1].url %>" class="next"><%= @getCollection('posts').toJSON()[documentIndex+1].title %> &rarr;</a></li>
+            <% else: %>
+                <li class="next disabled"><a href="#" class="next">Next &rarr;</a></li>
+            <% end %>
+            </ul>
+        <% end %>
+    <% end %>
+    <div class="panel panel-default disqus">
+      <div class="panel-heading">Comments</div>
+      <div class="panel-body">
+          <%- @getDisqus() %>
+      </div>
+    </div>
+  </footer>
