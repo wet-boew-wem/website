@@ -3,7 +3,7 @@ title: Road Map
 description: Present the direction of Drupal WxT
 layout: page
 tags: ['roadmap','page']
-pageOrder: 7
+pageOrder: 5
 ---
 
 .row
@@ -38,17 +38,20 @@ pageOrder: 7
       tbody
         tr.warning
           td 1
-          td Accessibility
+          td
+            a(href="/features/accessibility") Accessibility
           td Needs Work
           td A proper and extendable content workflow must be established.
         tr.success
           td 2
-          td Content Moderation
+          td
+            a(href="/features/content-moderation") Content Moderation
           td Functional
           td A proper and extendable content workflow must be established.
         tr.success
           td 3
-          td Content Staging / Deployment
+          td
+            a(href="/features/content-staging") Content Staging / Deployment
           td Functional
           td Content should be deployable allowing for content to be sent reliably across drupal platforms.
         tr.danger
@@ -58,27 +61,32 @@ pageOrder: 7
           td Content Authors should be able to quickly and easily modify content on the frontend.
         tr.success
           td 5
-          td WxT jQuery Framework
+          td
+            a(href="/features/wxt") WxT jQuery Framework
           td Functional
           td Maintain template adherance and tightly couple with the functionality provided by by WxT.
         tr.success
           td 6
-          td Metatags
+          td
+            a(href="/features/metatags") Metatags
           td Functional
           td Follow the Standard on Web Operability provided by TBS.
         tr.success
           td 7
-          td Migration
+          td
+            a(href="/features/migration") Migration
           td Functional
           td Provide an API allowing bulk migration of content from a variety of platforms into Drupal.
         tr.success
           td 8
-          td Multilingual
+          td
+            a(href="/features/multilingual") Multilingual
           td Functional
           td Provide multilingual support throughout the platform.
         tr.success
           td 9
-          td Universal Unique Identifiers
+          td
+            a(href="/features/uuid") Universal Unique Identifiers
           td Functional
           td All entities should be associated with UUID to allow for data to be reliably stored, accessed and deployed.
 
@@ -89,16 +97,32 @@ pageOrder: 7
       | This will be very exciting as Drupal already has a variety of bootstrap modules.
     p
       |In version 2.x of this distribution we will be evaluating the following modules/themes for possible integration:
-    .list-group
-      a(href="https://drupal.org/project/bootstrap").list-group-item
-        h4.list-group-item-heading Bootstrap
-        p.list-group-item-text
-          | Bootstrap base-theme for the Bootstrap Framework. (Port to Omega)
-      a(href="https://drupal.org/project/panels_bootstrap_layouts").list-group-item
-        h4.list-group-item-heading Panels Bootstrap Layouts
-        p.list-group-item-text
-          | Supports Panels based layouts using Twitter Bootstrap layout system as base.
-      a(href="https://drupal.org/project/views_bootstrap").list-group-item
-        h4.list-group-item-heading Views Bootstrap
-        p.list-group-item-text
-          | Create components for the Bootstrap theme in the configuration settings of Views.
+
+    table.table.table-responsive.table-hover
+      thead
+        tr
+          th #
+          th Module
+          th Status
+          th Description
+      tbody
+        tr.warning
+          td 1
+          td
+            a(href="http://drupal.org/project/bootstrap") Bootstrap
+          td Port
+          td Bootstrap base-theme for the Bootstrap Framework. (Port to Omega)
+      tbody
+        tr.success
+          td 1
+          td
+            a(href="http://drupal.org/project/panels_bootstrap_layouts") Panels Bootstrap Layouts
+          td Integrate
+          td Supports Panels based layouts using Twitter Bootstrap layout system as base.
+      tbody
+        tr.success
+          td 1
+          td
+            a(href="http://drupal.org/project/views_bootstrap") Views Bootstrap
+          td Integrate
+          td Create components for the Bootstrap theme in the configuration settings of Views.

@@ -125,7 +125,7 @@ docpadConfig = {
 			database.findAllLive({tags:$has:'concept'}, [date:-1])
 
 		features: (database) ->
-			database.findAllLive({tags:$has:'feature'}, [date:-1])
+			database.findAllLive({tags:$has:'feature'}, [name:1])
 
 		modules: (database) ->
 			database.findAllLive({tags:$has:'module'}, [name:1])
@@ -134,7 +134,7 @@ docpadConfig = {
 			database.findAllLive({pageOrder: $exists: true}, [pageOrder:1,title:1])
 
 		performance: (database) ->
-			database.findAllLive({tags:$has:'performance'}, [date:-1])
+			database.findAllLive({tags:$has:'performance'}, [name:1])
 
 		posts: (database) ->
 			database.findAllLive({tags:$has:'post'}, [date:-1])
