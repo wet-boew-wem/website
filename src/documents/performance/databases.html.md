@@ -4,11 +4,11 @@ layout: performance
 tags: ['databases','performance']
 ```
 
-There are a variety of Databases you can use with Drupal WxT each with there own set of caveats and use cases.
+There are a variety of Databases you can use with Drupal WxT each with their own set of caveats and use cases.
 
-The following is a curated and best practice list of the databases we recommend you consider when using Drupal WxT in order of preference.
+The following is a curated and best practice list of the databases we recommend you consider when using Drupal WxT, in order of preference.
 
-Note: Drupal can support other databases such as Microsoft SQL Server and Oracle but these have not been extensively tested with Drupal WxT.
+Note: Drupal can support other databases such as SQLite, Microsoft SQL Server and Oracle but these have not been extensively tested with Drupal WxT.
 
 ## PostgreSQL
 
