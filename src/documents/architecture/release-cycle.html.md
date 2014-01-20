@@ -22,10 +22,10 @@ begin. The whole process will be outlined in the [roadmap][roadmap] section.
 Updates
 -------
 
-* First as is standard Drupal procedure backup your database. (e.x. `drush arb`)
-* Backup your sites folder by moving it from the virtual host path to a backup location
-* Extract the latest release into your virtual host path
-* Copy back your sites directory
+* First and most importantly backup your database. (e.x. `drush arb`)
+* Additionally copy your sites folder by moving it from the virtual host path to a backup location
+* Extract the latest stable release of Drupal WxT into your virtual host path
+* Copy your sites directory into the new folder
 * Run `drush updatedb`
 * Ensure all of the WetKit Features are in a reverted state (WetKit Widgets + WetKit Images have a known overridden status due to: [Media Overridden][media_overriden])
 
