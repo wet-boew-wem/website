@@ -71,7 +71,7 @@ Note: Drush makes calls to executables without specifying the full path to their
 Download and install Git
 ------------------------
 
-* Download Git 1.7.10 or higher from [MsysGit][mysysgit].
+* Download Git 1.7.10 or higher from [MsysGit][msysgit].
 * Install Git 1.7.10 or higher (Some lower versions of git do not apply patches from the make file with Drush Make).
 
 Configure your proxy (if applicable)

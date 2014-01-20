@@ -5,7 +5,7 @@ layout: architecture
 tags: ['architecture']
 ```
 
-Drupal WxT uses Drush Make for rapid built out of the Drupal codebase. A drush make file is similar to "ant script" which allows for us to just host the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then can then perform a build out of both the Drupal Core package + and various contributed modules hosted on Drupal.org.
+Drupal WxT uses Drush Make for a rapid built-out of the Drupal codebase. A drush make file is similar to an "ant script" and allows us to host just the code that we are developing (Installation Profile and Custom Modules, Features, and Themes) on GitHub. Any user who has Drush installed can then perform a build-out of both the Drupal Core package and various contributed modules hosted on Drupal.org.
 
 1. Ensure you have the appropriate base requirements setup for Drupal as per the [System Requirements][system_requirements] documentation.
 
@@ -17,30 +17,55 @@ Drupal WxT uses Drush Make for rapid built out of the Drupal codebase. A drush m
   * a) Linux, Mac OSX: [Installer][git_osx_install]
   * b) Windows: [Installer][git_win_install]
 
-4. Clone this repository into a directory using the following commands on the Git Bash command prompt.
+4. Clone this repository into a directory using the following commands on the Git Bash command prompt:
 
   ``` bash
-  git clone https://github.com/wet-boew/wet-boew-drupal.git wet-boew-drupal;
+  git clone https://github.com/wet-boew/wet-boew-drupal.git wet-boew-drupal
   ```
 
-4. Build the Drupal installation profile
+5. Build the Drupal installation profile
 
+  * a) On a Unix-like system:
   ``` bash
   drush make --prepare-install --no-gitinfofile --working-copy wet-boew-drupal/build-wetkit-github.make /var/www/html --yes
   ```
 
-5. Quickly install using the Drush CLI (Password must not be simple or won't install)
+  * b) On Windows:
+  ``` bash
+  drush make --prepare-install --no-gitinfofile --working-copy wet-boew-drupal/build-wetkit-github.make C:\inetpub\wwwroot\Website1\ --yes
+  ```
 
+6. Quickly install using the Drush CLI (Password must not be simple or won't install)
+
+  * a) For example, on a MySQL database:
   ``` bash
   drush si wetkit wetkit_theme_selection_form.theme=wetkit_omega install_configure_form.demo_content=TRUE --sites-subdir=default --db-url=mysql://root:@127.0.0.1:3306/wetkit_db --account-name=admin --account-pass=WetKit@2013 --site-mail=admin@example.com --site-name='Web Experience Toolkit' --yes
   ```
 
-6. Fix Permissions
+  * b) For a PostgreSQL database, change the --db-url option to:
+  ``` bash
+  --db-url=pgsql://drupalusr:drupalpass@127.0.0.1/wetkit_db
+  ```
+
+  * c) For a Microsoft SQL Server database, change the --db-url option to:
+  ``` bash
+  --db-url=sqlsrv://drupalusr:drupalpass@127.0.0.1:1433/wetkit_db
+  ```
+
+7. Fix Permissions
 
   Depending on your server set-up you will have to make sure that the /sites/default/files or /sites/&lt;domain&gt;/files directory has the correct owner (webserver):
 
+  * a) On a Unix-like system:
   ``` bash
   chown -R apache:apache /sites/domain/files
+  ```
+  Note that on Ubuntu Linux the apache user is 'www-data';
+
+  * b) On Windows:
+  <!-- icacls sites\default\settings.php /grant BUILTIN\IIS_IUSRS:(W)-->
+  ``` bash
+  icacls sites\default\files /grant BUILTIN\IIS_IUSRS:(OI)(CI)(M)
   ```
 
 <!-- Links Referenced -->
