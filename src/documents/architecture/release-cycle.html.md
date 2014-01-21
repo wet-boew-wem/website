@@ -16,7 +16,7 @@ There will be no more new features integrated into the 7.x-1.x unless those requ
 be merged back into it to provide stability and a focus on production quality for this
 branch.
 
-The Drupal WxT 7.x-1.x will be where the new work on the Bootstrap integration will
+The Drupal WxT 7.x-2.x will be where the new work on the Bootstrap integration will
 begin. The whole process will be outlined in the [roadmap][roadmap] section.
 
 Updates
