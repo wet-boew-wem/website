@@ -12,27 +12,28 @@ The Drupal WxT 7.x-1.x branch will be updated with a stable release approximatel
 once a month roughly around the 18th. The reason for this is to follow as closely
 the Drupal security and core release cycle which is usually the 15th of every month.
 
-There will be no more new features integrated into the 7.x-1.x unless those requested to
-be merged back into it to provide stability and a focus on production quality for this
+There will be no more new features integrated into the 7.x-1.x branch unless those requested
+to be merged back into it to provide stability and a focus on production quality for this
 branch.
 
 The Drupal WxT 7.x-2.x will be where the new work on the Bootstrap integration will
-begin. The whole process will be outlined in the [roadmap][roadmap] section.
+begin. The whole process will be outlined in the [roadmap][roadmap] section. This branch
+should not be used in production environments at this point.
 
 Updates
 -------
 
+* Important: Only upgrade from one version to the sequential one don't skip versions!
 * First and most importantly backup your database. (e.x. `drush arb`)
 * Additionally copy your sites folder by moving it from the virtual host path to a backup location
 * Extract the latest stable release of Drupal WxT into your virtual host path
 * Copy your sites directory into the new folder
 * Run `drush updatedb`
-* Ensure all of the WetKit Features are in a reverted state (WetKit Widgets + WetKit Images have a known overridden status due to: [Media Overridden][media_overriden])
-
-  * a) [WetKit Widgets][wetkit_widgets] + [WetKit Images][wetkit_images] have a known overridden status due to a bug with: [Media + File Entity][media_overriden]
-  * b) For customization of default WetKit features so they remain in a reverted state use: [Features Override][features_override]
-
 * Run `drush cc all`
+* Ensure all of the WetKit Features are in a reverted state
+
+  * a) For customization of default WetKit features so they remain in a reverted state please use: [Features Override][features_override]
+
 * You have now successfully updated!
 
 IMPORTANT FILES
