@@ -23,7 +23,15 @@ should not be used in production environments at this point.
 Updates
 -------
 
-* Important: Only upgrade from one version to the sequential one don't skip versions!
+It is important to mention that you should only ever upgrade from version to the next sequential
+version. It is inadvisable to skip versions as certain update hooks expect the existence of certain
+files that might not exist in subsequent releases. Additionally do not manually update modules within
+distributions! Drupal Distributions contain a carefully selected set of module versions along with
+specific patches. You should never update individual modules within a distribution unless you are an
+experienced developer. In the end just stick to the release cycle as it will save you a lot of headache.
+
+* Important: Only ever upgrade from one version to the next sequential version
+* Important: Never manually update modules under the distributions control unless you know what you are doing
 * First and most importantly backup your database. (e.x. `drush arb`)
 * Additionally copy your sites folder by moving it from the virtual host path to a backup location
 * Extract the latest stable release of Drupal WxT into your virtual host path
