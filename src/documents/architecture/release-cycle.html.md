@@ -23,7 +23,7 @@ should not be used in production environments at this point.
 Update Process
 --------------
 
-It is important to mention that you should only ever upgrade from version to the next sequential
+It is important to mention that you should only ever upgrade from one version to the next sequential
 version. It is inadvisable to skip versions as certain update hooks expect the existence of certain
 files that might not exist in subsequent releases. Additionally do not manually update modules within
 distributions! Drupal Distributions contain a carefully selected set of module versions along with
@@ -45,7 +45,7 @@ experienced developer. In the end just stick to the release cycle as it will sav
 IMPORTANT FILES
 ---------------
 
-More then anything please consistently check both the [README.md][readme] and [CHANGELOG.md][readme] files for up-to-date information on the Drupal WxT releases.
+More then anything please consistently check both the [README.md][readme] and [CHANGELOG.md][changelog] files for up-to-date information on the Drupal WxT releases.
 
 <!-- Links Referenced -->
 
