@@ -14,17 +14,9 @@ Currently we provide WxT markup support via [Menu Block][menu_block] + [Panels][
 * **MidFooter**
 * **Sidebar**
 
-## Scenario 1: Sidebar
-
-Lets look at an example of how we can configure a Menu to render with the proper Sidebar markup that WxT expects.
-
-### Business Requirements
-
-  * For this example the menu will consist of the defined hierarchy below.
-  * We can only sow the "My Parent" and "Admin Portal" menus when the user has the correct role.
-  * Must align to WxT Markup and render as a secondary menu in mobile.
-
 ### Hierarchy
+
+The following menu hierarchy will be used for all of our scenarios below:
 
 ```rb
   SideBar
@@ -48,6 +40,16 @@ Lets look at an example of how we can configure a Menu to render with the proper
   ——--Users
   ——--Chat moderation
 ```
+
+## Scenario 1: Sidebar
+
+Lets look at an example of how we can configure a Menu to render with the proper Sidebar markup that WxT expects.
+
+### Business Requirements
+
+  * For this example the menu will consist of the defined menu hierarchy above.
+  * We can only show the "My Parent" and "Admin Portal" menus when the user has the correct role.
+  * Must align to WxT Sidebar Markup and render as a secondary menu in mobile.
 
 ### Panel Layouts
 
@@ -111,6 +113,15 @@ Sane Defaults to get the Menu Block to properly work with the Sidebar is as foll
     </div>
   </div>
 </div>
+
+## Scenario 2: MegaMenu
+
+Lets look at an example of how we can configure a Menu to render with the proper MegaMenu markup that WxT expects.
+
+### Business Requirements
+
+  * For this example the menu will consist of the defined menu hierarchy above.
+  * Must align to WxT MegaMenu Markup and render properly in mobile context.
 
 <div class="bs-callout bs-callout-info">
   <h4>More Information</h4>
