@@ -105,7 +105,7 @@ Sane Defaults to get the Menu Block to properly work with the Sidebar is as foll
     <div id="collapseTwo" class="panel-collapse collapse in">
       <div class="panel-body">
         <p align="center">
-          <img alt="Configuration Screen for Menu Block" src="https://dl.dropboxusercontent.com/u/38413195/drupalwxt/features/menu/scenario_1a_menublock_1a.png" class="img-responsive">
+          <img alt="Configuration Screen for Menu Block" src="https://dl.dropboxusercontent.com/u/38413195/drupalwxt/features/menu/scenario_1a_menublock_1b.png" class="img-responsive">
         </p>
       </div>
     </div>
