@@ -23,8 +23,12 @@ should not be used in production environments at this point.
 Update Process
 --------------
 
-It is important to mention that you should only ever upgrade from one version to the next sequential
-version. It is inadvisable to skip versions as certain update hooks expect the existence of certain
+<div class="bs-callout bs-callout-danger">
+  <h4>Important</h4>
+  <p>You should only ever upgrade from one version to the next sequential version</p>
+</div>
+
+It is inadvisable to skip versions as certain update hooks expect the existence of certain
 files that might not exist in subsequent releases. Additionally do not manually update modules within
 distributions! Drupal Distributions contain a carefully selected set of module versions along with
 specific patches. You should never update individual modules within a distribution unless you are an

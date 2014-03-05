@@ -84,7 +84,7 @@ Sane Defaults to get the Menu Block to properly work with the Sidebar is as foll
 
 * Ensure the override default title is on and text is empty.
 * Check that Block title embedded in menu option is enabled.
-* Select the appropriate theme function override
+* Select the appropriate theme function override.
 
   * Default
   * Megamenu
@@ -112,7 +112,16 @@ Sane Defaults to get the Menu Block to properly work with the Sidebar is as foll
   </div>
 </div>
 
+<div class="bs-callout bs-callout-info">
+  <h4>More Information</h4>
+  <p>For more information on the menu system and integration with menu block consider the following resources:</p>
+  <ul>
+    <li>The WetKit Menu module [README.md][wetkit_menu] file</li>
+  </ul>
+</div>
+
 <!-- Links Referenced -->
 
-[menu_block]:         http://drupal.org/project/menu_block
-[panels]:            http://drupal.org/project/panels
+[menu_block]:       http://drupal.org/project/menu_block
+[panels]:           http://drupal.org/project/panels
+[wetkit_menu]:      http://wiki.drupalwxt.org/wxt/menu/
