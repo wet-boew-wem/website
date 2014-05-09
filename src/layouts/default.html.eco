@@ -51,16 +51,30 @@
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav pull-right">
 					<% for document in @getCollection('pages').toJSON(): %>
-						<li
-							typeof="sioc:Page"
-							about="<%= document.url %>"
-							class="<%= 'active'	if @document.url is document.url %>"
-						>
-							<a href="<%= document.url %>" property="dc:title">
-								<%= document.title %>
-							</a>
-						</li>
+						<% if document.slug == 'pages-wxt': %>
+						<% continue %>
+						<% else if document.slug == 'pages-faq': %>
+						<% continue %>
+						<% else: %>
+							<li
+								typeof="sioc:Page"
+								about="<%= document.url %>"
+								class="<%= 'active'	if @document.url is document.url %>"
+							>
+								<a href="<%= document.url %>" property="dc:title">
+									<%= document.title %>
+								</a>
+							</li>
+						<% end %>
 					<% end %>
+ 					<li class="dropdown">
+                        <a href="#" data-toggle="dropdown" class="dropdown-toggle">WxT<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/pages/wxt">Overview</a></li>
+                            <li><a href="/pages/faq">FAQ</a></li>
+                        </ul>
+                    </li>
+
 				</ul>
 			</div><!--/.navbar-collapse -->
 		</div>
