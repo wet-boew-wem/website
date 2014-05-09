@@ -25,7 +25,8 @@ Update Process
 
 <div class="bs-callout bs-callout-danger">
   <h4>Important</h4>
-  <p>You should only ever upgrade from one version to the next sequential version</p>
+  <p>You should only ever upgrade from one version to the next sequential version!</p>
+  <p>Consistently check both the [README.md][readme] and [CHANGELOG.md][changelog] files for up-to-date information on the Drupal WxT releases.</p>
 </div>
 
 It is inadvisable to skip versions as certain update hooks expect the existence of certain
@@ -41,15 +42,9 @@ experienced developer. In the end just stick to the release cycle as it will sav
 * Run `drush updatedb`
 * Run `drush cc all`
 * Ensure all of the WetKit Features are in a reverted state
-
-  * a) For customization of default WetKit features so they remain in a reverted state please use: [Features Override][features_override]
-
+* For customization of default WetKit features so they remain in a reverted state please use: [Features Override][features_override]
 * You have now successfully updated!
 
-IMPORTANT FILES
----------------
-
-More then anything please consistently check both the [README.md][readme] and [CHANGELOG.md][changelog] files for up-to-date information on the Drupal WxT releases.
 
 <!-- Links Referenced -->
 

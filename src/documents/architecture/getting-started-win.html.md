@@ -4,11 +4,11 @@ layout: architecture
 tags: ['architecture']
 ```
 
-General Instructions
---------------------
-
-The most up to date instructions are available in the [README.md][readme]
-file. This page contains additional procedures for custom environments.
+<div class="bs-callout bs-callout-danger">
+  <h4>Important</h4>
+  <p>The most up to date instructions are available in the [README.md][readme]
+file. This page contains additional procedures for custom environments.</p>
+</div>
 
 Install Acquia Dev Desktop
 --------------------------
@@ -30,19 +30,19 @@ set up you can easily install Drupal WxT using the same *AMP resources.
 Configure Environment variables, host file and Apache
 -----------------------------------------------------
 
-1.  Update your $PATH Environment Variable to add the following location:
+1. Update your $PATH Environment Variable to add the following location:
 
   ```bash
   C:\Program Files\acquia-drupal\mysql\bin;
   ```
 
-2.  Add a new entry in your hosts file (C:\Windows\System32\drivers\etc\hosts):
+2. Add a new entry in your hosts file (C:\Windows\System32\drivers\etc\hosts):
 
   ```bash
   127.0.0.1    drupalwxt
   ```
 
-3.  Update your virtual host file from C:/Program Files/acquia-drupal/apache/conf/vhosts.conf with the following:
+3. Update your virtual host file from C:/Program Files/acquia-drupal/apache/conf/vhosts.conf with the following:
 
   ```bash
   <VirtualHost *>
