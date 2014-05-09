@@ -20,6 +20,8 @@ Getting Started
 
 4. Start hacking away by modifying the `src` directory
 
+5. Ensure your ulimit is set to at least 1024
+
 I'm getting EMFILE errors
 -------------------------
 
